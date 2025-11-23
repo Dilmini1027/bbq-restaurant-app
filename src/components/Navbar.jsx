@@ -27,7 +27,7 @@ export default function Navbar() {
       <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm py-4 px-4 md:px-10 flex justify-between items-center">
         <Link to="/" className="flex flex-col">
           <h1 className="text-2xl md:text-3xl font-bold text-amber-600 tracking-wider font-righteous">
-            <span className="text-red-600 drop-shadow-lg">THE BBQ</span> PLACE
+            <span className="text-red-600 drop-shadow-lg">Smoky</span> Kitchen
           </h1>
           <div className="text-xs text-gray-600 font-normal tracking-normal font-kalam -mt-1">
             Smoky • Bold • Delicious
