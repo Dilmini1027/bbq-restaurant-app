@@ -1,4 +1,3 @@
-import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import Navbar from "./components/Navbar";
@@ -12,24 +11,22 @@ import OrderPage from './pages/OrderPage';
 
 function App() {
   return (
-    <HelmetProvider>
-      <CartProvider>
-        <Router>
-        <ScrollToTop />
-        <div>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/menu" element={<MenuPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/reservation" element={<Reservation />} />
-            <Route path="/order" element={<OrderPage />} />
-          </Routes>
-          <Footer/>
-        </div>
-      </Router>
-      </CartProvider>
-    </HelmetProvider>
+    <CartProvider>
+      <Router>
+      <ScrollToTop />
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<MenuPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/reservation" element={<Reservation />} />
+          <Route path="/order" element={<OrderPage />} />
+        </Routes>
+        <Footer/>
+      </div>
+    </Router>
+    </CartProvider>
   );
 }
 
