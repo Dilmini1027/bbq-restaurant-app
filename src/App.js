@@ -1,4 +1,3 @@
-import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import Navbar from "./components/Navbar";
@@ -12,9 +11,8 @@ import OrderPage from './pages/OrderPage';
 
 function App() {
   return (
-    <HelmetProvider>
-      <CartProvider>
-        <Router>
+    <CartProvider>
+      <Router>
         <ScrollToTop />
         <div>
           <Navbar />
@@ -28,8 +26,7 @@ function App() {
           <Footer/>
         </div>
       </Router>
-      </CartProvider>
-    </HelmetProvider>
+    </CartProvider>
   );
 }
 
