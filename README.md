@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Smoky Kitchen — BBQ Restaurant Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live demo: https://bbq-restaurant-app-49ta.vercel.app/
 
-## Available Scripts
+Source: https://github.com/Dilmini1027/bbq-restaurant-app
 
-In the project directory, you can run:
+A modern, responsive BBQ restaurant web application built with React. The project includes an interactive menu, persistent cart with animated feedback, reservation workflow, and production deployment instructions.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Key Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Interactive menu with category filters (Appetizers, Mains, Sides, Desserts, Beverages)
+- Persistent shopping cart using React Context + localStorage
+- Animated cart feedback — flying "+1" animation when an item is added
+- Quantity management, remove item, and checkout flow stub
+- Reservation page with payment integration placeholder
+- Responsive, mobile-first UI styled with Tailwind CSS
+- SEO-friendly pages (lazy loading images, document title and meta description updates)
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React 19
+- React Router DOM
+- Tailwind CSS
+- LocalStorage for cart persistence
+- Deployed on Vercel (recommended)
 
-### `npm run build`
+## Getting Started (local)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/Dilmini1027/bbq-restaurant-app.git
+cd bbq-restaurant-app
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Run the dev server
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+App will be available at `http://localhost:3000` (the dev server may prompt to run on another port if 3000 is busy).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Build for Production
 
-## Learn More
+```bash
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This creates an optimized `build` folder suitable for deployment.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deploy (Vercel)
 
-### Code Splitting
+1. Push your repository to GitHub.
+2. Import the repo into Vercel and set the framework preset to **Create React App**.
+3. If you encounter dependency resolution errors on Vercel, set the install or build command to:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm install --legacy-peer-deps && npm run build
+```
 
-### Analyzing the Bundle Size
+4. Set the output directory to `build`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Environment & Configuration
 
-### Making a Progressive Web App
+- If you integrate real payment gateways or third-party APIs, add environment variables in Vercel or a `.env` file locally. Do not commit secrets to the repo.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Notes & Known Issues
 
-### Advanced Configuration
+- `react-helmet-async` was removed due to peer dependency conflicts with React 19; the app uses direct `document.title` and meta manipulation where needed.
+- If you see dependency resolution issues during deployment, prefer `--legacy-peer-deps` or upgrade/downgrade the conflicting packages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contributing
 
-### Deployment
+Contributions, issues, and feature requests are welcome. Please open a GitHub issue or submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
+This project is released under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+### Contact
+
+Developer: Dilmini — https://github.com/Dilmini1027
+
